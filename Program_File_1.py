@@ -16,7 +16,7 @@ pd.set_option('display.max_colwidth', None)
 
 
 Input_closed_ticket = 'fwmp_closed.orc'
-Input_opened_ticket = 'fwmp_open_unique.orc'
+Input_opened_ticket = 'fwmp_open.orc'
 
 
 # In[3]:
@@ -29,7 +29,6 @@ opened_tickets.dropna(inplace=True)
 closed_tickets = closed_tickets[['valuedatetime', 'resolveddatetime','complaintno', 'problemdesc', 'areaname', 'first_time_assigned', 'closedby']]
 closed_tickets = closed_tickets.drop_duplicates()
 closed_tickets.dropna(inplace=True)
-# opened_tickets = opened_tickets.drop(['assignedby'],axis = 1)
 
 
 # In[4]:
